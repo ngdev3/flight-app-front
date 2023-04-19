@@ -1,0 +1,84 @@
+<div id="searchflight" name="searchflight">
+    <fieldset id="search">
+        <mat-form-field>
+            <mat-label>Company</mat-label>
+            <mat-select>
+                <mat-option></mat-option>
+                <mat-option>Two</mat-option>
+                <mat-option>Three</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="inline">
+            <div class="left">
+                <mat-form-field class="left">
+                    <mat-label>Trip</mat-label>
+                    <mat-select>
+                        <mat-option></mat-option>
+                        <mat-option>One Way</mat-option>
+                        <mat-option>Round Trip</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="right">
+                    <mat-label>Flight Type</mat-label>
+                    <mat-select>
+                        <mat-option></mat-option>
+                        <mat-option>Direct</mat-option>
+                        <mat-option>Connecting</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="right">
+                <mat-form-field>
+                    <input matInput placeholder="Aircraft Type" type="text">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="inline">
+            <div class="left">
+                <mat-form-field>
+                    <input matInput placeholder="Departing From" type="text">
+                    <mat-icon>flight_takeoff</mat-icon>
+                </mat-form-field>
+
+            </div>
+            <div class="right">
+                <mat-form-field>
+                    <mat-icon>flight_land</mat-icon>
+                    <input matInput placeholder="Arriving At" type="text">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="inline">
+            <div class="left">
+                <mat-form-field>
+                    <mat-label>Departing Date min</mat-label>
+                    <input matInput [matDatepicker]="deparMin">
+                    <mat-datepicker-toggle matSuffix [for]="deparMin"></mat-datepicker-toggle>
+                    <mat-datepicker #deparMin></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="right">
+                <mat-form-field> 
+                    <mat-label>Departing Date Max</mat-label>
+                    <input matInput [matDatepicker]="deparMax">
+                    <mat-datepicker-toggle matSuffix [for]="deparMax"></mat-datepicker-toggle>
+                    <mat-datepicker #deparMax></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <mat-form-field>
+                <mat-label>Departing Time Min</mat-label>
+                <input matInput [ngxTimepicker]="deparTimeMin" [disableClick]="true" [format]="24" readonly formControlName="departureTimeMin">
+               <ngx-material-timepicker-toggle [for]="deparTimeMin"></ngx-material-timepicker-toggle>
+               <ngx-material-timepicker #deparTimeMin></ngx-material-timepicker>
+            </mat-form-field>
+   
+
+        </div>
+
+
+
+
+    </fieldset>
+</div>
