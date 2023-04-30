@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { NgxMaterialTimepickerModule, NgxMaterialTimepickerToggleIconDirective  } from 'ngx-material-timepicker';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
 
 
@@ -20,8 +20,7 @@ import { NgxMaterialTimepickerModule, NgxMaterialTimepickerToggleIconDirective  
     MatInputModule,
     MatIconModule,
     MatDatepickerModule,
-    MatNativeDateModule,
-    NgxMaterialTimepickerModule 
+    MatNativeDateModule 
   ],
   exports: [
     SearchFormComponent
